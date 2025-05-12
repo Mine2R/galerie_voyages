@@ -1,3 +1,4 @@
+/* Corps du site */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,18 +6,21 @@ body {
     color: #080101;
 }
 
+/* En-tête */
 header {
-    background-color: a0303;
+    background-color: #a0303; /* Erreur ici, corrige la couleur */
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #ddd;
 }
 
+/* Titre principal */
 h1 {
     margin: 0;
     font-size: 2em;
 }
 
+/* Sous-titre */
 .etoile-saharienne {
     color: green;
     font-size: 1.2em;
@@ -28,9 +32,10 @@ h1 {
     line-height: 1.6;
 }
 
+/* Galerie des images */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid adaptable */
     gap: 15px;
     padding: 30px;
 }
@@ -45,9 +50,10 @@ h1 {
 
 .gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Pagination */
 .pagination {
     text-align: center;
     margin-bottom: 30px;
@@ -70,6 +76,7 @@ h1 {
     color: white;
 }
 
+/* Footer */
 footer {
     background-color: #222;
     color: white;
@@ -77,4 +84,38 @@ footer {
     padding: 15px;
     font-size: 0.9em;
 }
+
+/* Media Queries pour appareils mobiles */
+@media (max-width: 768px) {
+    /* Titre principal plus petit */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    /* Ajuster la taille des sous-titres */
+    .etoile-saharienne {
+        font-size: 1em;
+    }
+
+    /* Galerie en une seule colonne sur mobile */
+    .gallery {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        padding: 15px;
+    }
+
+    /* Pagination avec des boutons plus larges */
+    .pagination a {
+        padding: 12px 20px;
+    }
+}
+
+/* Pour très petits écrans, comme les téléphones en portrait */
+@media (max-width: 480px) {
+    /* Réduire les marges et la taille du footer */
+    footer {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+}
+
 
